@@ -35,6 +35,12 @@
     <None Include="Shaders\SolidRect.fs">
       <Filter>Shader</Filter>
     </None>
+    <None Include="Shaders\FSSRect.fs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shaders\FSSRect.vs">
+      <Filter>Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

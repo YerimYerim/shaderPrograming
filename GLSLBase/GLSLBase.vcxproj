@@ -23,7 +23,8 @@
     <ProjectGuid>{25179D6C-FA85-4619-8EDB-AC241382F6CA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GLSLBase</RootNamespace>
-    <ProjectName> </ProjectName>
+    <ProjectName>
+    </ProjectName>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -173,6 +174,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\FSSRect.fs" />
+    <None Include="Shaders\FSSRect.vs" />
     <None Include="Shaders\SolidRect.fs" />
     <None Include="Shaders\SolidRect.vs" />
   </ItemGroup>

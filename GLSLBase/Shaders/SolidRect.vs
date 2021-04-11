@@ -49,7 +49,17 @@ void main()
 
 
 		float intensity = 1.0f - newTime / a_LifeTime;
-		color = a_Color * intensity;
+
+		if(	mod (newTime,3) == 0)
+		{
+			color = vec4(1.0f,1.0f,1.0f,1.0f);
+		}
+		else
+		{
+
+			color = a_Color * intensity;
+		}
+		
 	}
 	gl_Position = vec4(newPos , 1); // opengl고유의 출력값
 	v_Color = color;
