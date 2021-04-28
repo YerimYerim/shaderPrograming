@@ -691,17 +691,36 @@ void Renderer::Particle()
 	glDrawArrays(GL_TRIANGLES, 0, m_VBOManyPrticleCount);
 
 	
-	g_Time += 0.016;
+
 }
 
 void Renderer::FSSandbox()
 {
+
 	GLuint shader = m_FSSandboxShader;
 	glUseProgram(shader);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	GLuint attribPosLoc = glGetAttribLocation(shader, "a_Position");
 	glEnableVertexAttribArray(attribPosLoc);
 	glBindBuffer(GL_ARRAY_BUFFER , m_FSSandBox);
 	glVertexAttribPointer(attribPosLoc, 3, GL_FLOAT, GL_FALSE , sizeof(float) * 3, (GLvoid*)(0));
 
+
+	GLuint uniformPointLoc = glGetUniformLocation(shader, "u_Point");
+	glUniform3f(uniformPointLoc, 0.5f, 0.5f, 0.1f);
+
+
+	GLuint uniformTimetLoc = glGetUniformLocation(shader, "u_Time");
+	glUniform1f(uniformTimetLoc, g_Time);
+
+	float points[] = { -0.5,-0.5,0.01,-0.3,-0.5,0.01 ,-0.1,-0.2,0.03 ,-0.3,-0.2,0.01 ,-0.05,-0.5,0.05,
+	0.5,0.5,0.01,0.3,0.5,0.04 ,0.1,0.2,0.03 ,0.3,0.2,0.01 ,0.05,0.5,0.05 };
+	GLuint uniformPoinstLoc = glGetUniformLocation(shader, "u_Points");
+	glUniform3fv(uniformPoinstLoc, 10,points);
+
 	glDrawArrays(GL_TRIANGLES, 0, 6);
+	glDisable(GL_BLEND);
+	g_Time += 0.016;
 }

@@ -25,7 +25,7 @@
     <RootNamespace>GLSLBase</RootNamespace>
     <ProjectName>
     </ProjectName>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -174,7 +174,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\FSSRect.fs" />
+    <None Include="Shaders\FSSRect.fs">
+      <FileType>Text</FileType>
+    </None>
     <None Include="Shaders\FSSRect.vs" />
     <None Include="Shaders\SolidRect.fs" />
     <None Include="Shaders\SolidRect.vs" />
