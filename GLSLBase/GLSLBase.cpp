@@ -27,7 +27,10 @@ void RenderScene(void)
 
 	// Renderer Test
 	//g_Renderer->Particle();
-	g_Renderer->FSSandbox();
+	//g_Renderer->FSSandbox();
+	//g_Renderer->VSGridMeshSandbox();
+	g_Renderer->DrawSimpleTexture();
+	
 	glutSwapBuffers();
 }
 

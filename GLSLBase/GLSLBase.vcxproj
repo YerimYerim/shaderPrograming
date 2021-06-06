@@ -174,12 +174,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\FSGridMeshSandbox.fs" />
     <None Include="Shaders\FSSRect.fs">
       <FileType>Text</FileType>
     </None>
     <None Include="Shaders\FSSRect.vs" />
     <None Include="Shaders\SolidRect.fs" />
     <None Include="Shaders\SolidRect.vs" />
+    <None Include="Shaders\TextureFs.fs" />
+    <None Include="Shaders\TextureVs.vs" />
+    <None Include="Shaders\VSGridMeshSandbox.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
