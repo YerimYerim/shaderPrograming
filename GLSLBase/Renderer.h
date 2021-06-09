@@ -27,6 +27,8 @@ public:
 	void VSGridMeshSandbox();
 	void DrawSimpleTexture();
 
+	GLuint CreateFBO(int sx, int sy, GLuint* tex, GLuint* depthTex);
+
 private:
 	void Initialize(int windowSizeX, int windowSizeY);
 	bool ReadFile(char* filename, std::string *target);
@@ -75,6 +77,23 @@ private:
 	GLuint VBO_DummyMesh = 0;
 	GLuint m_TextureCheckerBoard = 0;
 	GLuint m_VBORect_PosTex = 0;
+	GLuint m_TextureRgb = 0;
 
+	GLuint m_TextureID0 = 0;
+	GLuint m_TextureID1 = 0;
+	GLuint m_TextureID2 = 0;
+	GLuint m_TextureID3 = 0;
+	GLuint m_TextureID4 = 0;
+	GLuint m_TextureID5 = 0;
+	GLuint gTextureIDTotal = 0;
+
+	GLuint m_FBO_0 = 0;
+	GLuint m_FBOTexture_0 = 0;
+	GLuint m_FBODepth_0 = 0;
+
+	GLuint m_FBO_P = 0;
+	GLuint m_FBOTexture_P = 0;
+	GLuint m_FBODepth_P = 0;
 };
 
+	
